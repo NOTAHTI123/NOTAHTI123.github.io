@@ -1,7 +1,70 @@
-<html>
-  <head>
-  </head>
-  <body>
-    <h1>TEST SUCCESS/h1>
-  </body>
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="style.css">
+        <meta charset="utf-8">
+        <title>Generation</title>
+        <header>
+            <h2 class="logo">E X T O N</h2>
+            <nav class="navigation">
+                <a href="#">Home</a>
+                <a href="#">Services</a>
+                <a href="#">About</a>
+                <a href="#">Support</a>
+                <button class="main-login-btn">Login</button>
+            </nav>
+        </header>
+    </head>
+    <body>
+
+        <div class="wrapper">
+            <div class="form-box login">
+                <form action="#">
+                    <h2 class="main-label">Login</h2>
+                    <div class="Form">
+                        <input class="input-box" type="email">
+                        <label class="indication-label">Email</label></br>
+                        <input class="input-box" type="password">
+                        <label class="indication-label">Password</label>
+                    </div>
+                    <div class="checkbox-forgot-password">
+                        <label class="checkbox"><input type="checkbox">Remember me?</label>
+                        <a href="#" class="forgot-password">Forgot password?</a>
+                    </div>
+                    <button class="btn">Login</button>
+                    <div class="other-page">
+                        <label class="signup">Don't have an account? <a href="#" class="register-link">Signup</a></label>
+                    </div>
+                </form>
+            </div>
+
+            <div class="form-box register">
+                <form action="#">
+                    <h2 class="main-label">Signup</h2>
+                    <div class="Form">
+                        <input class="input-box" type="text">
+                        <label class="indication-label">Username</label></br>
+                        <input class="input-box" type="email">
+                        <label class="indication-label">Email</label></br>
+                        <input class="input-box" type="password">
+                        <label class="indication-label">Password</label>
+                    </div>
+                    <div class="checkbox-forgot-password">
+                        <label class="checkbox"><input type="checkbox">I agree to the terms & conditions.</label>
+                    </div>
+                    <button class="btn">Register</button>
+                    <div class="other-page">
+                        <label class="signup">Already have an account? <a href="#" class="login-link">Login</a></label>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+
+        
+        <script src="script.js"></script>
+        <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    </body>
 </html>
