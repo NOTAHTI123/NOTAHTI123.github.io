@@ -181,7 +181,7 @@ header {
 
 .form-box.register {
     position: absolute;
-    transform: translateX(400px)
+    transform: translateX(600px)
 }
 
 .wrapper.signup-click .form-box.register {
@@ -195,5 +195,5 @@ header {
 
 .wrapper.signup-click .form-box.login {
     transition: .2s;
-    transform: translateX(-400px);
+    transform: translateX(-600px);
 }
