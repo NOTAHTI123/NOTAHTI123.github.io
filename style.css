@@ -15,7 +15,7 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background: url('background2.jpg') no-repeat;
+    background: url('./background2.jpg') no-repeat;
     background-size: cover;
     background-position: center;
     margin-top: 60px;
@@ -181,7 +181,7 @@ header {
 
 .form-box.register {
     position: absolute;
-    transform: translateX(400px)
+    transform: translateX(600px)
 }
 
 .wrapper.signup-click .form-box.register {
@@ -195,5 +195,5 @@ header {
 
 .wrapper.signup-click .form-box.login {
     transition: .2s;
-    transform: translateX(-400px);
+    transform: translateX(-600px);
 }
