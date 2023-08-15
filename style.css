@@ -197,3 +197,116 @@ header {
     transition: .2s;
     transform: translateX(-600px);
 }
+
+
+@media only screen and (max-width: 1920px) {
+.wrapper {
+    position: relative;
+    background: transparent;
+    width: 520px;
+    height: 450px;
+    backdrop-filter: blur(20px);
+    border: 2px solid rgba(255, 255, 255, .5);
+    border-radius: 20px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, .5);
+    display: flex;
+    justify-content: center;
+    transition: .2s;
+    align-items: center;
+    overflow: hidden;
+}
+
+
+
+.wrapper.signup-click {
+    position: relative;
+    background: transparent;
+    width: 520px;
+    height: 550px;
+    backdrop-filter: blur(20px);
+    border: 2px solid rgba(255, 255, 255, .5);
+    border-radius: 20px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, .5);
+    display: flex;
+    justify-content: center;
+    transition: .2s;
+    align-items: center;
+    overflow: hidden;
+}
+}
+
+@media only screen and (max-width: 704px) {
+.wrapper {
+    position: relative;
+    background: transparent;
+    width: 420px;
+    height: 350px;
+    backdrop-filter: blur(20px);
+    border: 2px solid rgba(255, 255, 255, .5);
+    border-radius: 20px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, .5);
+    display: flex;
+    justify-content: center;
+    transition: .2s;
+    align-items: center;
+    overflow: hidden;
+}
+
+
+
+.wrapper.signup-click {
+    position: relative;
+    background: transparent;
+    width: 420px;
+    height: 450px;
+    backdrop-filter: blur(20px);
+    border: 2px solid rgba(255, 255, 255, .5);
+    border-radius: 20px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, .5);
+    display: flex;
+    justify-content: center;
+    transition: .2s;
+    align-items: center;
+    overflow: hidden;
+}
+}
+
+@media only screen and (max-width: 546px) {
+.wrapper {
+    position: relative;
+    background: transparent;
+    width: 320px;
+    height: 350px;
+    backdrop-filter: blur(20px);
+    border: 2px solid rgba(255, 255, 255, .5);
+    border-radius: 20px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, .5);
+    display: flex;
+    justify-content: center;
+    transition: .2s;
+    align-items: center;
+    overflow: hidden;
+}
+
+
+
+.wrapper.signup-click {
+    position: relative;
+    background: transparent;
+    width: 320px;
+    height: 450px;
+    backdrop-filter: blur(20px);
+    border: 2px solid rgba(255, 255, 255, .5);
+    border-radius: 20px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, .5);
+    display: flex;
+    justify-content: center;
+    transition: .2s;
+    align-items: center;
+    overflow: hidden;
+}
+
+nav {
+    display: none;
+}
+}
