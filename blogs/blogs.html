@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EXTON</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+
+
+</head>
+
+<body>
+    <header>
+        <h2 class="logo">E X T O N</h2>
+        <div class="mobile-nav">
+            <ul>
+                <li><a class="mobile-links" href="#">Home</a></li>
+                <li><a class="mobile-links" href="https://github.com/NOTAHTI123">About</a></li>
+                <li><a class="mobile-links" href="#">Services</a></li>
+                <button class="btn-main" onclick="window.location.href='test.html';">Login</button>
+            </ul>
+        </div>
+        <nav>
+            <a class="navigation-links" href="#">Home</a>
+            <a class="navigation-links" href="https://github.com/NOTAHTI123" target="_blank">About</a>
+            <a class="navigation-links" href="#">Services</a>
+            <a class="navigation-links" href="blogs.html">Blogs</a>
+            <button class="btn-main" onclick="window.location.href='test.html';">Login</button>
+        </nav>
+    </header>
+    <div class="main-para">
+        <title>DNS:-</title>
+        <div class="child-para">
+            <p class="para" style="margin: 180px 20px 0px 119.5px;">&emsp;&emsp;&emsp;&nbsp;&nbsp;DNS, also known as
+                Domain Name System, is a diverse process without which using the internet is not possible. DNS is used
+                to translate the the url entered by the user to it's corresponding IP to let the web browser know where
+                the user wants to navigate.</p>
+            <br>
+            <p class="points">
+                There are 4 DNS servers involved in loading a web page:-<br>
+                <br>
+                &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;1. DNS recursor
+                <br>
+                &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;2. Root nameserver
+                <br>
+                &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;3. TLD nameserver
+                <br>
+                &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;4. Authoritative nameserver
+            </p><br>
+
+            <h3 class="stabilize-heading">1. DNS recursor:-</h3>
+            <p class="para">It can be thought of as a librarian who we ask to get a certain book. It receives the
+                queries
+                from client machines through applications such as a web browser. It is responsible for making
+                additional requests in order to satisfy the client's DNS query.</p>
+
+            <h3 class="stabilize-heading" style="margin-top: 29px;">2. Root nameserver:-</h3>
+            <p class="para" style="margin-left: 340px;">It is the first step in translating/resolving the human readable host names into IP
+                addresses
+                It can be thought of an index in library that points to racks of books.</p>
+
+            <h3 class="stabilize-heading" style="margin-top: 29px;">3. TLD nameserver:-</h3>
+            <p class="para" style="margin-left: 330px;">The top level domain can be thought of the rack of books in a library. This nameserver is the 
+                next step in search for a specific IP address, it hosts the last portion of a domain name. For
+                example in (google.com), the TLD server is "com".</p>
+
+            <h3 class="stabilize-heading" style="margin-top: 29px;">4. Authoritative nameserver:-</h3>
+            <p class="para" style="margin-left: 450px;">It can be thought of as a dictionary in the rack of books. It is responsible for translating the
+                domain name to it's corresponding IP address (if exists), and returns the IP to the DNS recursor.</p>
+            
+            <title style="position: relative; width: fit-content; margin-top: 4px;">DNS Lookup:-</title>
+            <p class="para">There are 8 steps in a DNS lookup:-</p>
+            <p class="para" style="margin-left: 440px; margin-top: 20px;">1. A user types ‘example.com’ into a web browser and the query travels into the Internet and is received by a DNS recursive resolver.</p>
+            <p class="para" style="margin-left: 440px; margin-top: 10px;">2. The resolver then queries a DNS root nameserver (.).</p>
+            <p class="para" style="margin-left: 440px; margin-top: 10px;">3. The root server then responds to the resolver with the address of a Top Level Domain (TLD) DNS server (such as .com or .net), which stores the information for its domains. When searching for example.com, our request is pointed toward the .com TLD.</p>
+            <p class="para" style="margin-left: 440px; margin-top: 10px;">4. The resolver then makes a request to the .com TLD.</p>
+            <p class="para" style="margin-left: 440px; margin-top: 10px;">5. The TLD server then responds with the IP address of the domain’s nameserver, example.com.</p>
+            <p class="para" style="margin-left: 440px; margin-top: 10px;">6. Lastly, the recursive resolver sends a query to the domain’s nameserver.</p>
+            <p class="para" style="margin-left: 440px; margin-top: 10px;">7. The IP address for example.com is then returned to the resolver from the nameserver.</p>
+            <p class="para" style="margin-left: 440px; margin-top: 10px;">8. The DNS resolver then responds to the web browser with the IP address of the domain requested initially.</p>
+        </div>
+        <script src="script.js"></script>
+        <footer>
+            <p>©2023 OUR coders limited</p>
+        </footer>
+</body>
+
+</html>
