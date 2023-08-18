@@ -16,7 +16,7 @@
 
 <body>
     <header>
-        <h2 class="logo">E X T O N</h2>
+        <h2 class="logo" style="user-select: none;">E X T O N</h2>
         <div class="mobile-nav">
             <ul>
                 <li><a class="mobile-links" href="#">Home</a></li>
@@ -83,10 +83,85 @@
             <p class="para" style="margin-left: 440px; margin-top: 10px;">6. Lastly, the recursive resolver sends a query to the domain’s nameserver.</p>
             <p class="para" style="margin-left: 440px; margin-top: 10px;">7. The IP address for example.com is then returned to the resolver from the nameserver.</p>
             <p class="para" style="margin-left: 440px; margin-top: 10px;">8. The DNS resolver then responds to the web browser with the IP address of the domain requested initially.</p>
+            
+            <title>Types of query:-</title>
+            <h3 class="stabilize-heading" style="position: relative; margin-left: 270px; margin-top: 192px;">1. Recursive query:-</h3>
+            <p class="para" style="margin-top: 13px; margin-left: 493px;">In a recursive query, a DNS client provides a hostname, and the DNS Resolver “must” provide an answer—it responds with either a relevant resource record, or an error message if it can't be found. The resolver starts a recursive query process, starting from the DNS Root Server, until it finds the Authoritative Name Server (for more on Authoritative Name Servers see DNS Server Types below) that holds the IP address and other information for the requested hostname.</p>
+
+            <h3 class="stabilize-heading" style="position: relative; margin-left: 270px; margin-top: 13px;">2. Iterative query:-</h3>
+            <p class="para" style="margin-top: 13px; margin-left: 493px;">In an iterative query, a DNS client provides a hostname, and the DNS Resolver returns the best answer it can. If the DNS resolver has the relevant DNS records in its cache, it returns them. If not, it refers the DNS client to the Root Server, or another Authoritative Name Server which is nearest to the required DNS zone. The DNS client must then repeat the query directly against the DNS server it was referred to.</p>
+
+            <h3 class="stabilize-heading" style="position: relative; margin-left: 270px; margin-top: 13px;">3. Non-Recursive query:-</h3>
+            <p class="para" style="margin-top: 13px; margin-left: 493px;">A non-recursive query is a query in which the DNS Resolver already knows the answer. It either immediately returns a DNS record because it already stores it in local cache, or queries a DNS Name Server which is authoritative for the record, meaning it definitely holds the correct IP for that hostname. In both cases, there is no need for additional rounds of queries (like in recursive or iterative queries). Rather, a response is immediately returned to the client.</p>
+
+            <title>DNS caching:-</title>
+            <p class="para" style="margin-left: 310px; margin-top: 192px;">The purpose of caching is to improve performance of data requests by the user. DNS data can be cached in a variety of locations each of which store DNS records for a set time determined by TTL (Time To Live).</p>
+
+            <h3 class="stabilize-heading" style="position: relative; margin-left: 270px; margin-top: 43px;">Browser DNS caching:-</h3>
+            <p class="para" style="margin-left: 340px; margin-top: 13px;">Nowadays, browsers are designed by default to cache DNS records for a set amount of time. The closer the FNS caching occurs to the web browser, the fewer processing steps must be taken to get the IP.
+                The browser cache is the first location checked for the requested record.</p>
+
+            <h3 class="stabilize-heading" style="position: relative; margin-left: 270px; margin-top: 43px;">OS level DNS caching:-</h3>
+            <p class="para" style="margin-left: 340px; margin-top: 13px;">The operating system level DNS resolver is the second and last local stop before a DNS query leaves your machine. The process inside your operating system that is designed to handle this query is commonly called a “stub resolver” or DNS client. When a stub resolver gets a request from an application, it first checks its own cache to see if it has the record. If it does not, it then sends a DNS query (with a recursive flag set), outside the local network to a DNS recursive resolver inside the Internet service provider (ISP).</p>
+
+            <title>DNS records:-</title> 
+            <p class="para" style="margin-left: 340px; margin-top: 192px;">They hold information related to your domain name. The types of DNS records are as follows:-</p>
+            <p class="para" style="margin-left: 340px; margin-top: 23px;">&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;A, AAAA, CNAME, MX, TXT, NS</p>
+
+            <h3 class="stabilize-heading" style="position: relative; margin-left: 270px; margin-top: 43px;">A record:-</h3>
+            <p class="para" style="margin-left: 340px; margin-top: 13px;">A record stands for Address record and it refers to the ip address of the server to which this domain points. TTL means for how much time, the server wants to cache the ip address on the client's system.
+                An example of how the A record may look like is:-<br>
+                   TYPE:- A <br>
+                   NAME:- @ (@ means it is not a sub domain like etc.roadmap.sh || root domain) <br>
+                   VALUE:- 185.199.108.153 (IP) <br>
+                   TTL:- 14400 (seconds) <br>
+                <br>Another example:- <br>
+                   <br>TYPE:- A <br>
+                   NAME:- app (app means a subdomain of app.roadmap.sh || can also be "your-site.com") <br>
+                   VALUE:- 185.199.108.153 (IP) <br>
+                   TTL:- 14400 (seconds) <br> </p>
+            <h3 class="stabilize-heading" style="position: relative; margin-left: 270px; margin-top: 43px;">CNAME record:-</h3>
+            <p class="para" style="margin-left: 340px; margin-top: 13px;">Stands for Canonical name record. Points a domain or subdomain to another domain. <br>
+                <br>An example is:-
+                   <br>TYPE:- CNAME <br>
+                   NAME:- www <br>
+                   VALUE:- roadmap.sh <br>
+                   TTL:- 14400 (seconds) <br>
+                   
+                   It returns the IP for roadmap.sh <br>
+                   Here, roadmap.sh is the A record and www is the CNAME.
+                   CNAME IS simple a name pointing to a domain. (like docs.google.com points to google.com)
+                   CNAME IS USED TO REDIRECT.</p>
+
+            <h3 class="stabilize-heading" style="position: relative; margin-left: 270px; margin-top: 43px;">MX record:-</h3>
+            <p class="para" style="margin-left: 340px; margin-top: 13px;">Stands for Mail Exchanger. It helps route the emails to the relevant server. (Points to email hosting providers like :- G-SUITE, Office365, Exchange. G-SUITE and ZOHO have the same MX records.) <br>
+                <br>It has 4 fields:- <br>
+                Name:- <br>
+                Mail-Server:- mx.zoho.com || mx2.zoho.com <br>
+                Priority:- 1 (can be 10, 20, ...) <br>
+                TTL:- 3600 <br> </p>
+            
+            <h3 class="stabilize-heading" style="position: relative; margin-left: 270px; margin-top: 43px;">TXT record:-</h3>
+            <p class="para" style="margin-left: 340px; margin-top: 13px;">Stands for Text record. It allows us to add arbitrary text to domain name. Used to verify ownership of a website or verifying your domain for email automation services. <br>
+                <br>It has two fields:- <br>
+                Name:- @ (website.com) <br>
+                Content:- (can be any text used for verification) <br> </p>
+            
+            <h3 class="stabilize-heading" style="position: relative; margin-left: 270px; margin-top: 43px;">NS record:-</h3>
+            <p class="para" style="margin-left: 340px; margin-top: 13px;">
+                Stands for Name Server record. It indicates the authoritative servers. 
+                There are mostly 2 nameservers.
+                NS records are used to specify the authoritative name servers for a domain. 
+                TLD points to NS and NS give the A record of the requested website.</p>
+
+            <h3 class="stabilize-heading" style="position: relative; margin-left: 270px; margin-top: 43px;">Glue record:-</h3>
+            <p class="para" style="margin-left: 340px; margin-top: 13px;">These play a very good role when it comes to finding IP of a url. When the recursor receives query, it asks the root server which returns the TLD id. When it reaches the TLD, It would not know about the 
+                IP of the TLD, in this case, the root server gives additional information know as glue records that help in locating the TLD server which makes it faster in locating the IP of requested website.</p>
+            
         </div>
         <script src="script.js"></script>
         <footer>
-            <p>©2023 OUR coders limited</p>
+            <!-- <p>©2023 OUR coders limited</p> -->
         </footer>
 </body>
 
