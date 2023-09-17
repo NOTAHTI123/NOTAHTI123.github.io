@@ -37,6 +37,7 @@ const App = () => {
         <div> 
             <Header handle_create_task={add_to_tasks_list} />
             <Tasks tasks_arr={tasks} remove_task={remove_task} />
+            <h4>Update v1.0</h4>
         </div>
     );
 };
