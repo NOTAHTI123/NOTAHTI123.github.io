@@ -17,5 +17,6 @@ spec:
       containers:
       - name: python-app
         image: kparwaz74/getting-started:jenkins-python
+        imagePullPolicy: "Always"
         ports:
         - containerPort: 5174
