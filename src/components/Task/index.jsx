@@ -15,6 +15,7 @@ const Task = (props) => {
             </button>
 
             <p>{props.title}</p>
+            <p>Update v1.0</p>
             <button className={styles.deleteButton} onClick={
                 e => {
                     props.remove_task(props.id);
