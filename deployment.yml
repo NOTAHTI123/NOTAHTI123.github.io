@@ -5,7 +5,7 @@ metadata:
   labels:
     app: jenkins-python-app
 spec:
-  replicas: 2
+  replicas: 1
   selector:
     matchLabels:
       app: jenkins-python-app
@@ -18,4 +18,4 @@ spec:
       - name: python-app
         image: kparwaz74/getting-started:jenkins-python
         ports:
-        - containerPort: 5173
+        - containerPort: 5174
