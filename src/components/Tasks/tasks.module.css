@@ -43,3 +43,11 @@
     flex-direction: column;
     gap: 12px;
   }
+
+  .completed_task_link {
+    cursor: pointer;
+    text-decoration: none;
+    user-select: none;
+    background: transparent;
+    border: 0;
+  }

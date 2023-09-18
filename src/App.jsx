@@ -14,6 +14,7 @@ const App = () => {
     const [completed, setCompleted] = useState("");
     const [tasks, setTasks] = useState([]); // will hold the tasks list
     const [count, setCount] = useState(0);
+    const [old_state, setold_state] = useState([]);
 
     function add_to_tasks_list(title) {
         setCompleted(false);
@@ -42,6 +43,14 @@ const App = () => {
         setTasks(new_task);
     }
 
+    function getcompleted() {
+        setTasks(tasks.filter(task => task.checked == true))
+    }
+
+    function get_all() {
+        setTasks(old_state);
+    }
+
     useEffect(()=>{
         setCount(0);
         let tmp = tasks.map(task => {
@@ -53,10 +62,11 @@ const App = () => {
     }, [tasks])
 
 
+
     return (
         <div> 
             <Header handle_create_task={add_to_tasks_list} />
-            <Tasks count={count} check_toggle={check_toggle} set_status={setCompleted} tasks_arr={tasks} remove_task={remove_task} />
+            <Tasks old_state={old_state} get_all={get_all} getcompleted={getcompleted} setold_state={setold_state} count={count} check_toggle={check_toggle} set_status={setCompleted} tasks_arr={tasks} remove_task={remove_task} />
         </div>
     );
 };

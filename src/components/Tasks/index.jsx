@@ -2,18 +2,31 @@ import styles from './tasks.module.css';
 import Task from '../Task/index';
 
 const Tasks = (props) => {
-    const tasksQuantity = props.tasks_arr.length;
+    let tasksQuantity = props.tasks_arr.length;
 
     return (
         <section className={styles.tasks}>
             <header className={styles.header}>
                 <div>
-                    <p>Created tasks</p>
+                    <a onClick={
+                        e=> {
+                            if(props.old_state.length !== 0) {
+                                props.get_all();
+                                tasksQuantity = props.tasks_arr.length;
+                            }
+                        }
+                    } className={styles.completed_task_link}><p>Created tasks</p></a>
                     <span>{tasksQuantity}</span>
                 </div>
 
                 <div>
-                    <p className={styles.textPurple}>Completed tasks</p>
+                    <a onClick={
+                        e=> {
+                            props.setold_state(props.tasks_arr);
+                            props.getcompleted();
+                            tasksQuantity = props.old_state.length;
+                        }
+                    } className={styles.completed_task_link}><p className={styles.textPurple}>Completed tasks</p></a>
                     <span>{props.count} of {tasksQuantity}</span>
                 </div>
             </header>

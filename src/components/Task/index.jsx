@@ -6,7 +6,6 @@ import { TbTrash } from 'react-icons/tb';
 
 
 const Task = (props) => {
-
     return (
         <div className={styles.task}>
             <button className={styles.checkContainer} onClick={ e => {
